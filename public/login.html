@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign in · Northstar Attendance</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body class="login-page">
+  <main class="login-layout">
+    <section class="login-brand-panel">
+      <div class="brand"><span class="brand-mark">N</span><span>northstar<span class="brand-dot">.</span></span></div>
+      <div class="login-brand-copy"><div class="eyebrow">Attendance OS</div><h1>Every class accounted for.</h1><p>One calm workspace for faculty, students, and academic operations.</p></div>
+      <div class="login-scale"><strong>5,000</strong><span>students tracked across<br>8 departments</span></div>
+    </section>
+    <section class="login-form-panel">
+      <div class="login-form-wrap">
+        <div class="eyebrow">Northstar University</div>
+        <h2>Welcome back</h2>
+        <p class="login-help">Sign in to continue to your attendance workspace.</p>
+        <form id="page-login-form">
+          <label>Email<input id="page-login-email" type="email" value="admin@northstar.edu" autocomplete="email" required></label>
+          <label>Password<input id="page-login-password" type="password" value="Admin@123" autocomplete="current-password" required></label>
+          <div class="login-demo-buttons"><button type="button" data-page-demo="admin">Admin</button><button type="button" data-page-demo="faculty">Faculty</button><button type="button" data-page-demo="student">Student</button></div>
+          <div class="login-error" id="page-login-error" role="alert"></div>
+          <button class="action-button login-submit" type="submit">Sign in <span>→</span></button>
+        </form>
+        <small class="login-footnote">Local assessment demo · credentials are provided in README.md</small>
+      </div>
+    </section>
+  </main>
+  <script src="/login.js"></script>
+</body>
+</html>

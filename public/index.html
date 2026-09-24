@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Northstar Attendance</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+    <div class="app-shell">
+        <aside class="sidebar">
+            <div class="brand"><span class="brand-mark">N</span><span>northstar<span class="brand-dot">.</span></span>
+            </div>
+            <div class="workspace-label">ATTENDANCE OS</div>
+            <nav class="nav" aria-label="Main navigation">
+                <button class="nav-item active" data-view="overview"><span class="nav-icon">▦</span> Overview</button>
+                <button class="nav-item" data-view="mark"><span class="nav-icon">✓</span> Mark attendance</button>
+                <button class="nav-item" data-view="students"><span class="nav-icon">◉</span> Students</button>
+                <button class="nav-item" data-view="faculty"><span class="nav-icon">♙</span> Faculty</button>
+                <button class="nav-item" data-view="reports"><span class="nav-icon">▤</span> Reports</button>
+                <button class="nav-item" data-view="my-attendance"><span class="nav-icon">◎</span> My
+                    attendance</button>
+                <button class="nav-item" data-view="corrections"><span class="nav-icon">↻</span> Corrections <span
+                        class="nav-badge" id="correction-badge">1</span></button>
+                <button class="nav-item" data-view="history"><span class="nav-icon">◷</span> History</button>
+            </nav>
+            <div class="sidebar-bottom">
+                <div class="term-card"><span class="term-dot"></span>
+                    <div><strong>Fall semester</strong><small>2026 · Week 08</small></div>
+                </div>
+                <div class="profile">
+                    <div class="avatar" id="profile-avatar">--</div>
+                    <div><strong id="profile-name">Loading profile</strong><small id="profile-role">Faculty</small>
+                    </div><span class="more">•••</span>
+                </div>
+            </div>
+        </aside>
+        <main class="main-content">
+            <header class="topbar"><button class="mobile-menu" aria-label="Open menu">☰</button>
+                <div class="crumb">Academic operations <span>/</span> <strong id="page-title">Overview</strong></div>
+                <div class="top-actions"><button class="text-button" id="login-button">Sign in</button><button
+                        class="icon-button" title="Notifications">♧<i></i></button><button
+                        class="help-button">?</button></div>
+            </header>
+            <section class="content" id="app"></section>
+        </main>
+    </div>
+    <div class="toast" id="toast" role="status"></div>
+    <div class="login-modal" id="login-modal" hidden>
+        <div class="login-dialog" role="dialog" aria-modal="true" aria-labelledby="login-title">
+            <button class="login-close" id="login-close" aria-label="Close sign in">×</button>
+            <div class="eyebrow">Northstar access</div>
+            <h2 id="login-title">Sign in</h2>
+            <p class="login-help">Use a demo account to unlock role-based workflows.</p>
+            <form id="login-form">
+                <label>Email<input id="login-email" type="email" value="admin@northstar.edu" required></label>
+                <label>Password<input id="login-password" type="password" value="Admin@123" required></label>
+                <div class="login-demo-buttons"><button type="button" data-demo="admin">Admin</button><button
+                        type="button" data-demo="faculty">Faculty</button><button type="button"
+                        data-demo="student">Student</button></div>
+                <div class="login-error" id="login-error" role="alert"></div>
+                <button class="action-button login-submit" type="submit">Continue</button>
+            </form>
+        </div>
+    </div>
+    <script src="/app.js?v=20260924-corrections"></script>
+</body>
+
+</html>
